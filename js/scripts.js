@@ -31,4 +31,34 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Animate skill bars when they come into view
+    const skillBars = document.querySelectorAll('.skill-item');
+    
+    const animateSkillBars = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const skillObserver = new IntersectionObserver(animateSkillBars, {
+        threshold: 0.5
+    });
+
+    skillBars.forEach(skillBar => {
+        skillObserver.observe(skillBar);
+    });
+
+    // Add typing effect for the main title
+    const titleElement = document.querySelector('h1');
+    if (titleElement) {
+        titleElement.style.opacity = '0';
+        setTimeout(() => {
+            titleElement.style.opacity = '1';
+            titleElement.style.animation = 'fadeInUp 1s ease-out';
+        }, 500);
+    }
+
 });
