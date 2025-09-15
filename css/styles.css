@@ -11786,3 +11786,50 @@ h2::after {
     padding: 1.5rem;
   }
 }
+
+/* Company grouping styles */
+.company-group {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+}
+
+.company-group:hover {
+  border-color: rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.company-group h2 {
+  color: #495057;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.company-group .subheading {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.company-group h3 {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.company-group .d-flex.flex-column.flex-md-row {
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 3px solid transparent;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.company-group .d-flex.flex-column.flex-md-row:hover {
+  border-left-color: #667eea;
+}
